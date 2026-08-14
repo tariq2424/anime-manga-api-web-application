@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename="/anime-manga-api-web-application">
     <Routes>
 
       <Route path='/' element={<Home/>} />
