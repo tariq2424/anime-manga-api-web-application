@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../common/Footer";
 import Header from "../common/Header";
+import { Link } from "react-router-dom";
 
 function Anime() {
   let [topanime, setTopAnime] = useState([]);
@@ -52,12 +53,12 @@ function Anime() {
                       </h2>
                       <p className="sec sm mb-24">Based on your filter</p>
                       <div className="row">
-                        {topanime.map((value, index) => {
+                       {topanime.map((value, index) => {
                           return (
                             <>
                               <div className="col-xxl-12 col-md-6">
-                                <a
-                                  href={`/topanimedetails/${value.mal_id}`}
+                                <Link
+                                  to={`/topanimedetails/${value.mal_id}`}
                                   className="anime-card mb-12"
                                 >
                                   <img
@@ -66,33 +67,39 @@ function Anime() {
                                       width: "90px",
                                       objectFit: "cover",
                                     }}
-                                    alt
+                                    alt=""
                                   />
+
                                   <div className="text-block">
                                     <div className="sm-title">
                                       <h6 className="color-white">
                                         {value.title_english}
                                       </h6>
                                     </div>
+
                                     <ul className="tag unstyled">
                                       <li>{value.genres[0]?.name}</li>
+
                                       <li>
                                         {value.year
                                           ? value.aired.prop.from.year
                                           : ""}
                                       </li>
+
                                       <li>
                                         {value.episodes
                                           ? "EP-" + value.episodes
                                           : ""}
                                       </li>
+
                                       <li className="icon">
                                         <i className="fas fa-star" />
                                       </li>
+
                                       <li>{value.score}</li>
                                     </ul>
                                   </div>
-                                </a>
+                                </Link>
                               </div>
                             </>
                           );
@@ -116,13 +123,14 @@ function Anime() {
                                 style={{ width: "400px", objectFit: "cover" }}
                                 alt
                               />
-                              <a
-                                href={`/animedetails/${value.mal_id}`}
-                                className="cus-btn light"
-                              >
-                                Stream Now
-                                <i className="far fa-play" />
-                              </a>
+                                <Link
+                                  to={`/animedetails/${value.mal_id}`}
+                                  className="cus-btn light"
+                                >
+                                  Stream Now
+                                  <i className="far fa-play" />
+                                </Link>
+                            
                             </div>
                             <div className="content">
                               <h4 className="h-24 color-white bold">
