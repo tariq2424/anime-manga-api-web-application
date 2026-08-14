@@ -18,7 +18,7 @@
 // //     <div className="container-fluid">
 // //       <nav className="navbar navbar-expand-lg p-0">
 // //         <div className="collapse navbar-collapse" id="mynavbar">
-// //           <a href="index.html" className="navbar-brand m-0 p-0"><img alt src="../assets/media/logo.png" /></a>
+// //           <a href="index.html" className="navbar-brand m-0 p-0"><img alt src={`${import.meta.env.BASE_URL}assets/media/logo.png`} /></a>
 // //           <ul className="navbar-nav m-0">
 // //             <li className="menu-item"><Link to="/">Home</Link></li>
 // //             <li className="menu-item"><Link to="/animes">Animes</Link></li>
@@ -84,7 +84,7 @@
 // //     <div className="container-fluid">
 // //       <div className="mobile-menu">
 // //         <div>
-// //           <a className="navbar-brand" href="index.html"><img alt src="../assets/media/logo.png" /></a>
+// //           <a className="navbar-brand" href="index.html"><img alt src={`${import.meta.env.BASE_URL}assets/media/logo.png`} /></a>
 // //         </div>
 // //         <div className="hamburger-menu">
 // //           <div className="bar" />
@@ -147,7 +147,7 @@
 //           <nav className="navbar navbar-expand-lg p-0">
 //             <div className="collapse navbar-collapse">
 //               <Link to="/" className="navbar-brand m-0 p-0">
-//                 <img alt="" src="../assets/media/logo.png" />
+//                 <img alt="" src={`${import.meta.env.BASE_URL}assets/media/logo.png`} />
 //               </Link>
 
 //               <ul className="navbar-nav m-0">
@@ -249,7 +249,7 @@
 //           <div className="mobile-menu">
 //             <div>
 //               <Link className="navbar-brand" to="/">
-//                 <img alt="" src="../assets/media/logo.png" />
+//                 <img alt="" src={`${import.meta.env.BASE_URL}assets/media/logo.png`} />
 //               </Link>
 //             </div>
 //           </div>
@@ -294,7 +294,7 @@ function Header() {
           <Link to="/" className="navbar-brand m-0 p-0">
             <img 
               alt="" 
-              src="../assets/media/logo.png" 
+              src={`${import.meta.env.BASE_URL}assets/media/logo.png`} 
               style={{height:"40px"}}
             />
           </Link>
@@ -379,7 +379,7 @@ function Header() {
         <Link to="/">
           <img 
             alt="" 
-            src="../assets/media/logo.png" 
+            src={`${import.meta.env.BASE_URL}assets/media/logo.png`} 
             style={{height:"35px"}}
           />
         </Link>

@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer-about">
           <div className="logo mb-40">
             <a href="index.html">
-              <img src="../assets/media/logo.png" alt />
+              <img src={`${import.meta.env.BASE_URL}assets/media/logo.png`} alt />
             </a>
           </div>
           <p className="light-gray h-20 light mb-32">
